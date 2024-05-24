@@ -1,0 +1,5 @@
+sample_id,SRA_accession,treatment,replicate,paired_status,read1,read2
+S2_DRSC_Untreated-1,SRR031708,untreated,1,single_end,SRR031708.fastq.gz,NA
+S2_DRSC_Untreated-3,SRR031714,untreated,3,paired_end,SRR031714_1.fastq.gz,SRR031714_2.fastq.gz
+S2_DRSC_CG8144_RNAi-1,SRR031718,rnai,1,single_end,SRR031718.fastq.gz,NA
+S2_DRSC_CG8144_RNAi-3,SRR031724,rnai,3,paired_end,SRR031724_1.fastq.gz,SRR031724_2.fastq.gz
