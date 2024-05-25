@@ -23,7 +23,7 @@ workflow {
     reads_channel = channel.fromPath(params.samplesheet)
         | splitCsv(header:true)
         | map{
-            // map{} applies a closure (function) to each element of a channel
+            // map{} applies a function to each element of a channel
             // In this case, the rows from splitCsv() are converted to a tuple based on the header 
             row -> tuple(row.sample_id, row.paired_status, file(params.input_dir + row.read1), file(params.input_dir + row.read2))
         }
