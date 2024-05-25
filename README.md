@@ -7,6 +7,7 @@ functionality of Nextflow.
 
 ## Requirements
 
+To execute the wokflow, you need:
 1. A container runtime, one of:
    - Docker
    - Apptainer
@@ -14,6 +15,9 @@ functionality of Nextflow.
 2. Nextflow and its dependencies.
    - https://www.nextflow.io/docs/latest/install.html
 3. Ability to run shell scripts and general comfortability on the command line.
+
+**Note:** The scripts to download the test data and the reference transcriptome
+require apptainer, you can also use Podman or Docker with modification.
 
 ## Workflow Steps
 
@@ -33,7 +37,7 @@ functionality of Nextflow.
 
 ## Successful Run
 
-![Docker Example](example_execution/podman_run.png)
+![Podman Example](example_execution/podman_run.png)
 
 ## References
 
@@ -49,5 +53,5 @@ map between Drosophila and mammals. Genome Res 2011 Feb;21(2):193-202. PMID: 209
 Brooks AN, Duff MO, May G, Yang L et al. Regulation of alternative splicing in
 Drosophila by 56 RNA binding proteins. Genome Res 2015 Nov;25(11):1771-80. PMID: 26294686
 
-GEO: GSE18508
+GEO: GSE18508<br>
 SRA: SRP001537
