@@ -37,7 +37,7 @@ workflow {
 //Workflow steps
 process FASTQC {
     tag "FastQC on $sample_id" // This labels the process with the sample_id on the command line
-    publishDir "${params.outdir}/01_fastqc/${sample_id}", overwrite: false  // Specify where to output the results, note that they will be symlinks to the {baseDir}/work directory unless you use mode: copy
+    publishDir "${params.outdir}/01_fastqc/${sample_id}"  // Specify where to output the results, note that they will be symlinks to the {baseDir}/work directory unless you use mode: copy
     container "quay.io/biocontainers/fastqc:0.11.9--hdfd78af_1"  // Docker containers will work with Docker, Podman, Apptainer, etc.
     cpus 1  // For production workflows you probably want to also request specific amounts of other resources like memory
 
@@ -68,7 +68,7 @@ process FASTQC {
 
 process SALMON_QUANT {
     tag "SALMON_QUANT on $sample_id"
-    publishDir "${params.outdir}/02_salmon_quant/${sample_id}", overwrite: false
+    publishDir "${params.outdir}/02_salmon_quant/${sample_id}"
     container "quay.io/biocontainers/salmon:1.10.3--hecfa306_0"
     cpus 4
 
